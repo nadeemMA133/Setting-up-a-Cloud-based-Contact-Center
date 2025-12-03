@@ -1,0 +1,58 @@
+{
+  "diagram": {
+    "mxGraphModel": {
+      "root": {
+        "mxCell": [
+          { "id": "0" },
+          { "id": "1", "parent": "0" },
+
+          {
+            "id": "customers",
+            "value": "Customers / Users\nVoice | Chat | SMS | Email",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;",
+            "vertex": "1",
+            "parent": "1",
+            "mxGeometry": { "x": 300, "y": 40, "width": 240, "height": 80, "as": "geometry" }
+          },
+          {
+            "id": "genesys",
+            "value": "Genesys Cloud CX Platform\n• Omnichannel Routing\n• IVR / Bots\n• WFM / QM / Recording\n• Analytics",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;",
+            "vertex": "1",
+            "parent": "1",
+            "mxGeometry": { "x": 260, "y": 160, "width": 320, "height": 140, "as": "geometry" }
+          },
+          {
+            "id": "crm",
+            "value": "CRM Systems\nSalesforce / Dynamics / ServiceNow",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;",
+            "vertex": "1",
+            "parent": "1",
+            "mxGeometry": { "x": 40, "y": 360, "width": 220, "height": 100, "as": "geometry" }
+          },
+          {
+            "id": "middleware",
+            "value": "Enterprise Middleware\niPaaS (MuleSoft / Boomi / AIS)",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;",
+            "vertex": "1",
+            "parent": "1",
+            "mxGeometry": { "x": 300, "y": 360, "width": 220, "height": 100, "as": "geometry" }
+          },
+          {
+            "id": "data",
+            "value": "Data & Analytics\nData Lake / BI Tools",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;",
+            "vertex": "1",
+            "parent": "1",
+            "mxGeometry": { "x": 560, "y": 360, "width": 220, "height": 100, "as": "geometry" }
+          },
+
+          { "id": "edge1", "source": "customers", "target": "genesys", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge2", "source": "genesys", "target": "crm", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge3", "source": "genesys", "target": "middleware", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge4", "source": "genesys", "target": "data", "edge": "1", "style": "endArrow=classic;" }
+        ]
+      }
+    }
+  }
+}
