@@ -1,0 +1,88 @@
+{
+  "diagram": {
+    "mxGraphModel": {
+      "root": {
+        "mxCell": [
+          { "id": "0" },
+          { "id": "1", "parent": "0" },
+
+          {
+            "id": "pstn",
+            "value": "Public PSTN",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor:#b85450;",
+            "vertex": "1",
+            "mxGeometry": { "x": 70, "y": 40, "width": 160, "height": 70, "as": "geometry" }
+          },
+          {
+            "id": "gcVoice",
+            "value": "Genesys Cloud Voice",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#fff2cc;strokeColor:#d6b656;",
+            "vertex": "1",
+            "mxGeometry": { "x": 50, "y": 150, "width": 200, "height": 70, "as": "geometry" }
+          },
+          {
+            "id": "mediaLayer",
+            "value": "Genesys Media Layer\n(SBC, SIP Routing, IVR)",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#dae8fc;strokeColor:#6c8ebf;",
+            "vertex": "1",
+            "mxGeometry": { "x": 30, "y": 260, "width": 240, "height": 90, "as": "geometry" }
+          },
+          {
+            "id": "agents",
+            "value": "Agents\n(WebRTC / Softphone)",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#d5e8d4;strokeColor:#82b366;",
+            "vertex": "1",
+            "mxGeometry": { "x": 60, "y": 390, "width": 180, "height": 80, "as": "geometry" }
+          },
+
+          {
+            "id": "sipCarrier",
+            "value": "Enterprise SIP Carrier",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#f8cecc;strokeColor:#b85450;",
+            "vertex": "1",
+            "mxGeometry": { "x": 350, "y": 40, "width": 200, "height": 70, "as": "geometry" }
+          },
+          {
+            "id": "carrierSbc",
+            "value": "Carrier SBC / SIP Edge",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#ffe6cc;strokeColor:#d79b00;",
+            "vertex": "1",
+            "mxGeometry": { "x": 350, "y": 150, "width": 200, "height": 70, "as": "geometry" }
+          },
+          {
+            "id": "byoc",
+            "value": "Genesys Cloud BYOC Edge",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#fff2cc;strokeColor:#d6b656;",
+            "vertex": "1",
+            "mxGeometry": { "x": 350, "y": 260, "width": 200, "height": 80, "as": "geometry" }
+          },
+
+          {
+            "id": "premSbc",
+            "value": "On-Prem Enterprise SBC",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#ffe6cc;strokeColor:#d79b00;",
+            "vertex": "1",
+            "mxGeometry": { "x": 620, "y": 150, "width": 220, "height": 70, "as": "geometry" }
+          },
+          {
+            "id": "premByoc",
+            "value": "BYOC Premises\n(VPN / Direct Connect)",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#fff2cc;strokeColor:#d6b656;",
+            "vertex": "1",
+            "mxGeometry": { "x": 620, "y": 260, "width": 220, "height": 80, "as": "geometry" }
+          },
+
+          { "id": "edge1", "source": "pstn", "target": "gcVoice", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge2", "source": "gcVoice", "target": "mediaLayer", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge3", "source": "mediaLayer", "target": "agents", "edge": "1", "style": "endArrow=classic;" },
+
+          { "id": "edge4", "source": "sipCarrier", "target": "carrierSbc", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge5", "source": "carrierSbc", "target": "byoc", "edge": "1", "style": "endArrow=classic;" },
+
+          { "id": "edge6", "source": "sipCarrier", "target": "premSbc", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge7", "source": "premSbc", "target": "premByoc", "edge": "1", "style": "endArrow=classic;" }
+        ]
+      }
+    }
+  }
+}
