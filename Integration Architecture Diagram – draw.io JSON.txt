@@ -1,0 +1,53 @@
+{
+  "diagram": {
+    "mxGraphModel": {
+      "root": {
+        "mxCell": [
+          { "id": "0" },
+          { "id": "1", "parent": "0" },
+
+          {
+            "id": "cxApi",
+            "value": "Genesys Cloud CX APIs\nREST | Webhooks | Events",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;",
+            "vertex": "1",
+            "mxGeometry": { "x": 290, "y": 60, "width": 250, "height": 90, "as": "geometry" }
+          },
+          {
+            "id": "integrationLayer",
+            "value": "Enterprise Integration Layer\nMuleSoft / Boomi / Informatica / AIS\n• API Mediation\n• Event Orchestration",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;",
+            "vertex": "1",
+            "mxGeometry": { "x": 220, "y": 200, "width": 400, "height": 140, "as": "geometry" }
+          },
+          {
+            "id": "crm",
+            "value": "CRM Systems\nSalesforce / Dynamics / ServiceNow",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;",
+            "vertex": "1",
+            "mxGeometry": { "x": 40, "y": 390, "width": 220, "height": 100, "as": "geometry" }
+          },
+          {
+            "id": "wfm",
+            "value": "Workforce Systems\nVerint / NICE / WFM",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#f8cecc;strokeColor:#b85450;",
+            "vertex": "1",
+            "mxGeometry": { "x": 300, "y": 390, "width": 220, "height": 100, "as": "geometry" }
+          },
+          {
+            "id": "data",
+            "value": "Data Lake / BI\nPower BI / Tableau / ML",
+            "style": "rounded=1;whiteSpace=wrap;html=1;fillColor:#e1d5e7;strokeColor:#9673a6;",
+            "vertex": "1",
+            "mxGeometry": { "x": 560, "y": 390, "width": 220, "height": 100, "as": "geometry" }
+          },
+
+          { "id": "edge1", "source": "cxApi", "target": "integrationLayer", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge2", "source": "integrationLayer", "target": "crm", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge3", "source": "integrationLayer", "target": "wfm", "edge": "1", "style": "endArrow=classic;" },
+          { "id": "edge4", "source": "integrationLayer", "target": "data", "edge": "1", "style": "endArrow=classic;" }
+        ]
+      }
+    }
+  }
+}
